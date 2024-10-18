@@ -1,6 +1,8 @@
 export const uploadImage = async (img: File) => {
   let imgUrl = null;
-  const API_URL = process.env.PUBLIC_APP_ENDPOINT || "https://kku-blog-server.onrender.com";
+  const API_URL =
+    process.env.PUBLIC_APP_ENDPOINT ||
+    "https://kku-blog-server-ak2l.onrender.com";
 
   const formData = new FormData();
   formData.append("file", img);

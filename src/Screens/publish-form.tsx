@@ -14,7 +14,9 @@ const PublishForm = () => {
   const characterLimit = 200;
   const tagLimit = 10;
   const context = useContext(EditorContext);
-  const API_URL = process.env.PUBLIC_APP_ENDPOINT || "https://kku-blog-server.onrender.com";
+  const API_URL =
+    process.env.PUBLIC_APP_ENDPOINT ||
+    "https://kku-blog-server-ak2l.onrender.com";
   let {
     userAuth: { access_token },
   } = useContext(UserContext);
@@ -99,11 +101,15 @@ const PublishForm = () => {
       draft: false,
     };
     axios
-      .post(API_URL + "/create-blog", {...blogObj, id: blog_id}, {
-        headers: {
-          Authorization: `Bearer ${access_token}`,
-        },
-      })
+      .post(
+        API_URL + "/create-blog",
+        { ...blogObj, id: blog_id },
+        {
+          headers: {
+            Authorization: `Bearer ${access_token}`,
+          },
+        }
+      )
       .then(() => {
         target.classList.remove("disable");
 

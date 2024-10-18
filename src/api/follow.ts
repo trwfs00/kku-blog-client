@@ -1,4 +1,6 @@
-const API_BASE_URL = process.env.PUBLIC_APP_ENDPOINT || "https://kku-blog-server.onrender.com";
+const API_BASE_URL =
+  process.env.PUBLIC_APP_ENDPOINT ||
+  "https://kku-blog-server-ak2l.onrender.com";
 
 export const fetchProfile = async (me: string | null): Promise<any> => {
   if (!me) {

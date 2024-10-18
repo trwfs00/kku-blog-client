@@ -12,7 +12,9 @@ const DeleteAccountModal: React.FC<{
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
-  const API_BASE_URL = process.env.PUBLIC_APP_ENDPOINT || "https://kku-blog-server.onrender.com";
+  const API_BASE_URL =
+    process.env.PUBLIC_APP_ENDPOINT ||
+    "https://kku-blog-server-ak2l.onrender.com";
   const navigate = useNavigate();
 
   const handleDeleteAccount = async () => {

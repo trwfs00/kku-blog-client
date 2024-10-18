@@ -2,7 +2,9 @@ import axios, { AxiosResponse } from "axios";
 import { Post } from "../types/post";
 import Cookies from "js-cookie";
 
-const API_BASE_URL = process.env.PUBLIC_APP_ENDPOINT || "https://kku-blog-server.onrender.com";
+const API_BASE_URL =
+  process.env.PUBLIC_APP_ENDPOINT ||
+  "https://kku-blog-server-ak2l.onrender.com";
 
 const createPost = async (post: any): Promise<any> => {
   const url = `${API_BASE_URL}/posts`;
