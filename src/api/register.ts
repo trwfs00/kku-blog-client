@@ -1,4 +1,4 @@
-const API_BASE_URL = process.env.PUBLIC_APP_ENDPOINT;
+const API_BASE_URL = process.env.PUBLIC_APP_ENDPOINT || "https://kku-blog-server.onrender.com";
 
 const registerUser = async (user: any): Promise<any> => {
   const url = `${API_BASE_URL}/register`;

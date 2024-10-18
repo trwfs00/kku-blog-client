@@ -15,7 +15,7 @@ interface LoginPageProps {
 
 const UserAuthForm: React.FC<LoginPageProps> = ({ type }) => {
   const authForm = useRef<HTMLFormElement>(null);
-  const API_URL = process.env.PUBLIC_APP_ENDPOINT;
+  const API_URL = process.env.PUBLIC_APP_ENDPOINT || "https://kku-blog-server.onrender.com";
 
   const {
     userAuth: { access_token },

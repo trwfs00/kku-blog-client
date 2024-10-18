@@ -1,4 +1,4 @@
-const API_BASE_URL = process.env.PUBLIC_APP_ENDPOINT;
+const API_BASE_URL = process.env.PUBLIC_APP_ENDPOINT || "https://kku-blog-server.onrender.com";
 
 // Function to fetch all questions
 export const fetchQuestionsAPI = async () => {

@@ -1,7 +1,7 @@
 import { Post } from "../types/post";
 import { User } from "../types/user";
 
-const API_BASE_URL = process.env.PUBLIC_APP_ENDPOINT;
+const API_BASE_URL = process.env.PUBLIC_APP_ENDPOINT || "https://kku-blog-server.onrender.com";
 
 export const searchPost = async (query: string): Promise<Post[]> => {
   try {
