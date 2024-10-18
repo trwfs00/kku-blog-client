@@ -17,7 +17,6 @@
     "@giphy/react-components": "9.6.0",
     "@mui/material": "^5.16.7",
     "@mui/x-charts": "^7.21.0",
-    "@nivo/pie": "0.85.1",
     "@testing-library/jest-dom": "5.17.0",
     "@testing-library/react": "13.4.0",
     "@testing-library/user-event": "13.5.0",
@@ -42,7 +41,6 @@
     "gapi-script": "1.2.0",
     "js-cookie": "3.0.5",
     "moment": "2.30.1",
-    "nivo": "0.31.0",
     "react": "18.2.0",
     "react-avatar-edit": "1.2.0",
     "react-avatar-editor": "13.0.2",
@@ -51,9 +49,6 @@
     "react-day-picker": "8.10.0",
     "react-dom": "18.2.0",
     "react-easy-crop": "5.0.5",
-    "react-facebook-login": "4.1.1",
-    "react-giphy-searchbox": "1.5.4",
-    "react-google-login": "5.2.2",
     "react-hot-toast": "^2.4.1",
     "react-icons": "5.0.1",
     "react-image-crop": "11.0.5",
@@ -67,7 +62,6 @@
     "web-vitals": "2.1.4"
   },
   "scripts": {
-    "install": "npm install --legacy-peer-deps",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -95,12 +89,11 @@
     "@types/node": "20.14.11",
     "@types/react-avatar-editor": "13.0.2",
     "@types/react-dom": "18.3.0",
-    "@types/react-facebook-login": "4.1.11",
     "@typescript-eslint/eslint-plugin": "7.18.0",
     "@typescript-eslint/parser": "7.18.0",
     "eslint": "8.57.0",
     "eslint-plugin-react": "7.35.0",
     "eslint-plugin-react-hooks": "4.6.2",
-    "typescript": "^5.3.3"
+    "typescript": "4.9.5"
   }
 }
