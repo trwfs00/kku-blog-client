@@ -2,7 +2,7 @@ import axios, { AxiosResponse } from "axios";
 import { Post } from "../types/post";
 import Cookies from "js-cookie";
 
-const API_BASE_URL = "http://localhost:3001";
+const API_BASE_URL = process.env.PUBLIC_APP_ENDPOINT;
 
 const createPost = async (post: any): Promise<any> => {
   const url = `${API_BASE_URL}/posts`;

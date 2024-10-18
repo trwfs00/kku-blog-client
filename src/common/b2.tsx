@@ -1,6 +1,6 @@
 export const uploadImage = async (img: File) => {
   let imgUrl = null;
-  const API_URL = "http://localhost:3001";
+  const API_URL = process.env.PUBLIC_APP_ENDPOINT;
 
   const formData = new FormData();
   formData.append("file", img);

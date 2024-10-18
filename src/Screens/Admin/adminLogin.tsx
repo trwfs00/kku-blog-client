@@ -18,7 +18,7 @@ interface LoginPageProps {
 
 const Login: React.FC<LoginPageProps> = ({ type }) => {
   const authForm = useRef<HTMLFormElement>(null);
-  const API_URL = "http://localhost:3001";
+  const API_URL = process.env.PUBLIC_APP_ENDPOINT;
   const navigate = useNavigate();
 
   const {

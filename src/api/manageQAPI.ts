@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:3001";
+const API_BASE_URL = process.env.PUBLIC_APP_ENDPOINT;
 
 // Function to fetch all questions
 export const fetchQuestionsAPI = async () => {

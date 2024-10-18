@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:3001";
+const API_BASE_URL = process.env.PUBLIC_APP_ENDPOINT;
 
 export const fetchProfile = async (me: string | null): Promise<any> => {
   if (!me) {

@@ -65,7 +65,7 @@ const ReportDetailsModal: React.FC<ReportDetailsModalProps> = ({
   refreshReports,
 }) => {
   const navigate = useNavigate();
-  const API_BASE_URL = "http://localhost:3001";
+  const API_BASE_URL = process.env.PUBLIC_APP_ENDPOINT;
 
   const verifyReport = async (
     reportId: string,

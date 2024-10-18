@@ -13,7 +13,7 @@ const ChangePasswordModal: React.FC<{
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const [countdown, setCountdown] = useState(5);
-  const API_BASE_URL = "http://localhost:3001";
+  const API_BASE_URL = process.env.PUBLIC_APP_ENDPOINT;
 
   const validatePassword = (password: string) => {
     const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,20}$/;

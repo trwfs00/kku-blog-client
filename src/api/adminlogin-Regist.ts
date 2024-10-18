@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:3001";
+const API_BASE_URL = process.env.PUBLIC_APP_ENDPOINT;
 
 export const registerAdmin = async (admin: any): Promise<any> => {
   const url = `${API_BASE_URL}/admin/register`;

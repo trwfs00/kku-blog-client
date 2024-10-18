@@ -1,7 +1,7 @@
 import { Post } from "../types/post";
 import { User } from "../types/user";
 
-const API_BASE_URL = "http://localhost:3001";
+const API_BASE_URL = process.env.PUBLIC_APP_ENDPOINT;
 
 export const searchPost = async (query: string): Promise<Post[]> => {
   try {

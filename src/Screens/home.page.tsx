@@ -19,7 +19,7 @@ interface BlogState {
 }
 
 const HomePage = () => {
-  const API_URL = "http://localhost:3001";
+  const API_URL = process.env.PUBLIC_APP_ENDPOINT;
   const [blogs, setBlogs] = useState<BlogState | null>(null);
   const [trendingBlogs, setTrendingBlogs] = useState<Post[] | null>(null);
   const [pageState, setPageState] = useState("หน้าหลัก");

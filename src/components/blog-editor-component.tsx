@@ -13,7 +13,7 @@ import { EditorContext } from "../Screens/editor-page";
 import axios from "axios";
 
 const BlogEditor = () => {
-  const API_URL = "http://localhost:3001";
+  const API_URL = process.env.PUBLIC_APP_ENDPOINT;
   const editorContext = useContext(EditorContext);
   let { blog_id } = useParams();
 

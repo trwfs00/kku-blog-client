@@ -12,7 +12,7 @@ const DeleteAccountModal: React.FC<{
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
-  const API_BASE_URL = "http://localhost:3001";
+  const API_BASE_URL = process.env.PUBLIC_APP_ENDPOINT;
   const navigate = useNavigate();
 
   const handleDeleteAccount = async () => {

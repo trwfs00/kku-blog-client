@@ -82,7 +82,7 @@ interface Report {
 
 const AdminHome: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const API_BASE_URL = "http://localhost:3001";
+  const API_BASE_URL = process.env.PUBLIC_APP_ENDPOINT;
 
   const [adminProfile, setAdminProfile] = useState<any>(true);
   const adminUsername = sessionStorage.getItem("userId");

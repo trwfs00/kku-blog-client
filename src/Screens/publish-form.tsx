@@ -14,7 +14,7 @@ const PublishForm = () => {
   const characterLimit = 200;
   const tagLimit = 10;
   const context = useContext(EditorContext);
-  const API_URL = "http://localhost:3001";
+  const API_URL = process.env.PUBLIC_APP_ENDPOINT;
   let {
     userAuth: { access_token },
   } = useContext(UserContext);
