@@ -33,6 +33,7 @@
     "bcryptjs": "2.4.3",
     "bootstrap": "5.3.3",
     "bootstrap-icons": "^1.11.3",
+    "caniuse-lite": "^1.0.30001669",
     "chart.js": "4.4.2",
     "dayjs": "1.11.10",
     "emoji-picker-react": "4.12.0",
