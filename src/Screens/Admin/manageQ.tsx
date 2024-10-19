@@ -38,16 +38,16 @@ const ManageQ: React.FC = () => {
     loadQuestions();
   }, []);
 
-  const handleAddQuestion = async (e: React.FormEvent) => {
+  const handleAddQuestion = async (e: React.FormEvent, adminId?: string) => {
     e.preventDefault();
 
-    if (!id) {
+    if (!adminId) {
       console.error("Admin ID is undefined");
       return;
     }
 
     try {
-      const newQuestion = await addQuestionAPI(topic, answer, id);
+      const newQuestion = await addQuestionAPI(topic, answer, adminId);
       setQuestions((prev) => [...prev, newQuestion]);
       setTopic("");
       setAnswer("");
@@ -178,7 +178,7 @@ const ManageQ: React.FC = () => {
           <Button variant="secondary" onClick={() => setShowAddModal(false)}>
             Cancel
           </Button>
-          <Button variant="primary" onClick={handleAddQuestion}>
+          <Button variant="primary" onClick={(e) => handleAddQuestion(e,id)}>
             Save
           </Button>
         </Modal.Footer>

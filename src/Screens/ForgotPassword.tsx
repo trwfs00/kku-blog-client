@@ -22,7 +22,7 @@ const ForgotPassword = () => {
       return; // หยุดการส่งฟอร์ม
     }
 
-    fetch("http://localhost:3001/forgot-password", {
+    fetch("https://kku-blog-server-ak2l.onrender.com/forgot-password", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -58,7 +58,7 @@ export const fetchUser = async () => {
     console.error("No token found, redirecting to login...");
     return;
   }
-  const response = await fetch("http://localhost:3001/profile", {
+  const response = await fetch("https://kku-blog-server-ak2l.onrender.com/profile", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -82,7 +82,7 @@ export const fetchUsersAPI = async () => {
     return;
   }
 
-  const response = await fetch("http://localhost:3001/admin/users", {
+  const response = await fetch("https://kku-blog-server-ak2l.onrender.com/admin/users", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -105,7 +105,7 @@ export const fetchAllUser = async () => {
     return;
   }
 
-  const response = await fetch("http://localhost:3001/admin/viewer", {
+  const response = await fetch("https://kku-blog-server-ak2l.onrender.com/admin/viewer", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",

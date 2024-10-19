@@ -20,7 +20,7 @@ const ResetPassword: React.FC = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:3001/reset_password/${type}/${id}/${token}`,
+        `https://kku-blog-server-ak2l.onrender.com/reset_password/${type}/${id}/${token}`,
         {
           method: "POST",
           headers: {

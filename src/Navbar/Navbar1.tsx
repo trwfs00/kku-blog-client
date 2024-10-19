@@ -224,7 +224,7 @@ const Navbar1: React.FC<Navbar1Props> = ({ children }) => {
     e.preventDefault();
     try {
       await axios.patch(
-        `http://localhost:3001/notifications/${notificationId}/mark-as-read`
+        `https://kku-blog-server-ak2l.onrender.com/notifications/${notificationId}/mark-as-read`
       );
       setNotifications((prevNotifications) =>
         prevNotifications.map((notification) =>
@@ -245,7 +245,7 @@ const Navbar1: React.FC<Navbar1Props> = ({ children }) => {
     const fetchNotifications = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3001/notifications?userId=${userId}`
+          `https://kku-blog-server-ak2l.onrender.com/notifications?userId=${userId}`
         );
         setNotifications(response.data);
       } catch (error) {

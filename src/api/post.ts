@@ -377,7 +377,7 @@ const deletePostById = async (id: string): Promise<any> => {
       throw new Error("Token is missing");
     }
 
-    const response = await fetch(`http://localhost:3001/posts/${id}`, {
+    const response = await fetch(`https://kku-blog-server-ak2l.onrender.com/posts/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

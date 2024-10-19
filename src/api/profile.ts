@@ -66,7 +66,7 @@ export const fetchPostsByUser = async (userId: string) => {
 export const fetchLikedPosts = async (userId: string) => {
   try {
     const response = await fetch(
-      `http://localhost:3001/posts/likedPosts/${userId}`
+      `https://kku-blog-server-ak2l.onrender.com/posts/likedPosts/${userId}`
     );
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);

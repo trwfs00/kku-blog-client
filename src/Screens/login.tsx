@@ -99,7 +99,7 @@ const Login: React.FC = () => {
 
   const handleLogin = useCallback(async () => {
     try {
-      const url = `http://localhost:3001/login`;
+      const url = `https://kku-blog-server-ak2l.onrender.com/login`;
 
       const response = await fetch(url, {
         method: "POST",
@@ -177,7 +177,7 @@ const Login: React.FC = () => {
         date_of_birth,
       };
 
-      const response = await fetch("http://localhost:3001/login", {
+      const response = await fetch("https://kku-blog-server-ak2l.onrender.com/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
