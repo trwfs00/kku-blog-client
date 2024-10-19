@@ -1,5 +1,5 @@
 const API_BASE_URL =
-  process.env.PUBLIC_APP_ENDPOINT ||
+  process.env.REACT_APP_API_ENDPOINT ||
   "https://kku-blog-server-ak2l.onrender.com";
 
 const registerUser = async (user: any): Promise<any> => {

@@ -123,10 +123,7 @@ function App() {
           <Route path="/admin/login" element={<LoginAdmin type="admin" />} />
           <Route path="/admin/:adminId" element={<AdminHome />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
-          <Route
-            path="/reset_password/:type/:id/:token"
-            element={<ResetPassword />}
-          />
+          <Route path="/reset-password/:token" element={<ResetPassword />} />
           {/* <Route path="/forgot-password" element={<ForgotPassword />} />
              <Route path="/verify-otp" element={<VerifyOTP />} />
              <Route path="/reset-password" element={<ResetPassword />} /> */}

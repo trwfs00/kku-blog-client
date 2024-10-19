@@ -15,7 +15,7 @@ const PublishForm = () => {
   const tagLimit = 10;
   const context = useContext(EditorContext);
   const API_URL =
-    process.env.PUBLIC_APP_ENDPOINT ||
+    process.env.REACT_APP_API_ENDPOINT ||
     "https://kku-blog-server-ak2l.onrender.com";
   let {
     userAuth: { access_token },
