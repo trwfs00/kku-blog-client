@@ -51,13 +51,15 @@ const Login: React.FC<LoginPageProps> = ({ type }) => {
         }
         return response.json();
       })
-      .then((data) => {
+      .then((data): any => {
         storeInSession("user", JSON.stringify(data));
         setUserAuth(data);
         userInSession("userId", data.username);
         userIdInSession("adminId", data._id);
 
         console.log("data.role", data);
+
+        localStorage.setItem("userId", data._id);
 
         if (data.role === "admin") {
           navigate(`/admin/${data._id}`);
