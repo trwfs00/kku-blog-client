@@ -11,7 +11,7 @@ import {
 } from "../../api/manageQAPI";
 
 const ManageQ: React.FC = () => {
-  const { id } = useParams<{ id: string }>();
+  const { adminId } = useParams<{ adminId: string }>();
   const [questions, setQuestions] = useState<any[]>([]);
   const [showAddModal, setShowAddModal] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
@@ -178,8 +178,8 @@ const ManageQ: React.FC = () => {
           <Button variant="secondary" onClick={() => setShowAddModal(false)}>
             Cancel
           </Button>
-          <Button variant="primary" onClick={(e) => handleAddQuestion(e,id)}>
-            Save
+          <Button variant="primary" onClick={(e) => handleAddQuestion(e,adminId)}>
+            Sav
           </Button>
         </Modal.Footer>
       </Modal>

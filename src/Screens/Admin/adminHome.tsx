@@ -81,7 +81,7 @@ interface Report {
 }
 
 const AdminHome: React.FC = () => {
-  const { id } = useParams<{ id: string }>();
+  const { adminId } = useParams<{ adminId: string }>();
   const API_BASE_URL =
     process.env.PUBLIC_APP_ENDPOINT ||
     "https://kku-blog-server-ak2l.onrender.com";
@@ -206,8 +206,8 @@ const AdminHome: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        if (id) {
-          const profileData = await fetchAdminProfile(id);
+        if (adminId) {
+          const profileData = await fetchAdminProfile(adminId);
           setUsername(profileData.username);
           setAdminProfile(profileData);
           setEmail(profileData.email);
@@ -221,7 +221,7 @@ const AdminHome: React.FC = () => {
     };
 
     fetchData();
-  }, [id]);
+  }, [adminId]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -303,7 +303,7 @@ const AdminHome: React.FC = () => {
   const [isUserHovered, setIsUserHovered] = useState(false);
   const [isViewHovered, setIsViewHovered] = useState(false);
 
-  const [monthsUser, setMonthsUser] = useState([
+  let monthsUser = [
     { month: "January", joinAt: 0 },
     { month: "February", joinAt: 0 },
     { month: "March", joinAt: 0 },
@@ -316,9 +316,9 @@ const AdminHome: React.FC = () => {
     { month: "October", joinAt: 0 },
     { month: "November", joinAt: 0 },
     { month: "December", joinAt: 0 },
-  ]);
+  ];
 
-  const [monthsPost, setMonthsPost] = useState([
+  let monthsPost = [
     { month: "January", publishedAt: 0 },
     { month: "February", publishedAt: 0 },
     { month: "March", publishedAt: 0 },
@@ -331,34 +331,23 @@ const AdminHome: React.FC = () => {
     { month: "October", publishedAt: 0 },
     { month: "November", publishedAt: 0 },
     { month: "December", publishedAt: 0 },
-  ]);
+  ];
 
   getUser?.forEach((user: any) => {
-    const date = new Date(user.joinedAt);
+    const date = new Date(user.joinedAt || user.createdAt);
     const monthIndex = date.getUTCMonth();
-    // monthsUser[monthIndex].joinAt += 1;
-    setMonthsUser((prevMonths) => {
-      const updatedMonths = [...prevMonths];
-      updatedMonths[monthIndex] = {
-        month: date.toLocaleString("en-US", { month: "long" }),
-        joinAt: updatedMonths[monthIndex].joinAt + 1,
-      };
-      return updatedMonths;
-    })
+    if (!isNaN(monthIndex)) {
+      monthsUser[monthIndex].joinAt += 1;
+    }
   });
 
   getBlog?.forEach((blog: any) => {
     const publishedDate = new Date(blog.publishedAt);
     const monthIndex = publishedDate.getMonth();
-    // monthsPost[monthIndex].publishedAt += 1;
-    setMonthsPost((prevMonths) => {
-      const updatedMonths = [...prevMonths];
-      updatedMonths[monthIndex] = {
-        month: publishedDate.toLocaleString("en-US", { month: "long" }),
-        publishedAt: updatedMonths[monthIndex].publishedAt + 1,
-      };
-      return updatedMonths;
-    })
+    if (!isNaN(monthIndex)) {
+      monthsPost[monthIndex].publishedAt += 1;
+    }
+    
   });
 
   // ข้อมูลตัวอย่างสำหรับกราฟ
