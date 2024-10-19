@@ -303,7 +303,7 @@ const AdminHome: React.FC = () => {
   const [isUserHovered, setIsUserHovered] = useState(false);
   const [isViewHovered, setIsViewHovered] = useState(false);
 
-  let monthsUser = [
+  const [monthsUser, setMonthsUser] = useState([
     { month: "January", joinAt: 0 },
     { month: "February", joinAt: 0 },
     { month: "March", joinAt: 0 },
@@ -316,9 +316,9 @@ const AdminHome: React.FC = () => {
     { month: "October", joinAt: 0 },
     { month: "November", joinAt: 0 },
     { month: "December", joinAt: 0 },
-  ];
+  ]);
 
-  let monthsPost = [
+  const [monthsPost, setMonthsPost] = useState([
     { month: "January", publishedAt: 0 },
     { month: "February", publishedAt: 0 },
     { month: "March", publishedAt: 0 },
@@ -331,18 +331,34 @@ const AdminHome: React.FC = () => {
     { month: "October", publishedAt: 0 },
     { month: "November", publishedAt: 0 },
     { month: "December", publishedAt: 0 },
-  ];
+  ]);
 
   getUser?.forEach((user: any) => {
     const date = new Date(user.joinedAt);
     const monthIndex = date.getUTCMonth();
-    monthsUser[monthIndex].joinAt += 1;
+    // monthsUser[monthIndex].joinAt += 1;
+    setMonthsUser((prevMonths) => {
+      const updatedMonths = [...prevMonths];
+      updatedMonths[monthIndex] = {
+        month: date.toLocaleString("en-US", { month: "long" }),
+        joinAt: updatedMonths[monthIndex].joinAt + 1,
+      };
+      return updatedMonths;
+    })
   });
 
   getBlog?.forEach((blog: any) => {
     const publishedDate = new Date(blog.publishedAt);
     const monthIndex = publishedDate.getMonth();
-    monthsPost[monthIndex].publishedAt += 1;
+    // monthsPost[monthIndex].publishedAt += 1;
+    setMonthsPost((prevMonths) => {
+      const updatedMonths = [...prevMonths];
+      updatedMonths[monthIndex] = {
+        month: publishedDate.toLocaleString("en-US", { month: "long" }),
+        publishedAt: updatedMonths[monthIndex].publishedAt + 1,
+      };
+      return updatedMonths;
+    })
   });
 
   // ข้อมูลตัวอย่างสำหรับกราฟ
