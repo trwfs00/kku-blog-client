@@ -88,7 +88,6 @@ const AdminHome: React.FC = () => {
 
   const [adminProfile, setAdminProfile] = useState<any>(true);
   const adminUsername = sessionStorage.getItem("userId");
-
   const [userCounter, setUserCounter] = useState<number>(0);
   const [postCounter, setPostCounter] = useState<number>(0);
   const [totalViews, setTotalViews] = useState<number>(0);
@@ -304,7 +303,7 @@ const AdminHome: React.FC = () => {
   const [isUserHovered, setIsUserHovered] = useState(false);
   const [isViewHovered, setIsViewHovered] = useState(false);
 
-  const monthsUser = [
+  let monthsUser = [
     { month: "January", joinAt: 0 },
     { month: "February", joinAt: 0 },
     { month: "March", joinAt: 0 },
@@ -319,7 +318,7 @@ const AdminHome: React.FC = () => {
     { month: "December", joinAt: 0 },
   ];
 
-  const monthsPost = [
+  let monthsPost = [
     { month: "January", publishedAt: 0 },
     { month: "February", publishedAt: 0 },
     { month: "March", publishedAt: 0 },
