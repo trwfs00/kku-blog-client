@@ -11,6 +11,7 @@ import {
   userInSession,
   userIdInSession,
 } from "../../common/session";
+import { API_BASE_URL } from "../../api/const/apiBaseUrl";
 
 interface LoginPageProps {
   type: string;
@@ -18,9 +19,6 @@ interface LoginPageProps {
 
 const Login: React.FC<LoginPageProps> = ({ type }) => {
   const authForm = useRef<HTMLFormElement>(null);
-  const API_URL =
-    process.env.REACT_APP_API_ENDPOINT ||
-    "https://kku-blog-server-ak2l.onrender.com";
   const navigate = useNavigate();
 
   const {
@@ -36,7 +34,7 @@ const Login: React.FC<LoginPageProps> = ({ type }) => {
     serverRoute: string,
     formData: { [key: string]: any }
   ) => {
-    fetch(API_URL + serverRoute, {
+    fetch(API_BASE_URL + serverRoute, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

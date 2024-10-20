@@ -33,6 +33,7 @@ import ReportDetailsModal from "./approve-modal";
 import { Button } from "react-bootstrap";
 import { Line } from "react-chartjs-2"; // ใช้แสดงกราฟ Line
 import "chart.js/auto"; // สำหรับการใช้งาน Chart.js
+import { API_BASE_URL } from "../../api/const/apiBaseUrl";
 
 interface Report {
   _id: string;
@@ -82,9 +83,6 @@ interface Report {
 
 const AdminHome: React.FC = () => {
   const { adminId } = useParams<{ adminId: string }>();
-  const API_BASE_URL =
-    process.env.REACT_APP_API_ENDPOINT ||
-    "https://kku-blog-server-ak2l.onrender.com";
 
   const [adminProfile, setAdminProfile] = useState<any>(true);
   const adminUsername = sessionStorage.getItem("userId");
