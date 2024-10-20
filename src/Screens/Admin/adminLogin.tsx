@@ -167,8 +167,8 @@ const Login: React.FC<LoginPageProps> = ({ type }) => {
                   <img src={logohead} alt="easyclass" />
                 </div>
 
-                <div className="heading">
-                  <h2>ยินดีต้อนรับผู้ดูแลระบบ</h2>
+                <div className="heading" style={{textAlign:"center"}}>
+                  <h4>ยินดีต้อนรับผู้ดูแลระบบ</h4>
                 </div>
 
                 <div className="actual-form">
@@ -209,41 +209,6 @@ const Login: React.FC<LoginPageProps> = ({ type }) => {
               </form>
             </div>
 
-            <div className="carousell">
-              <div className="images-wrapper">
-                <img
-                  src="../../pic/image1.png"
-                  className="image img-1 show"
-                  alt=""
-                />
-                <img
-                  src="../../pic/image2.png"
-                  className="image img-2"
-                  alt=""
-                />
-                <img
-                  src="../../pic/image3.png"
-                  className="image img-3"
-                  alt=""
-                />
-              </div>
-
-              <div className="text-slider">
-                <div className="text-wrap">
-                  <div className="text-group">
-                    <h2>สร้างประสบการณ์ของคุณเอง</h2>
-                    <h2>แลกเปลี่ยนความคิดเห็นกับผู้อื่น</h2>
-                    <h2>หาความรู้กับบุคคลทั่วไป</h2>
-                  </div>
-                </div>
-
-                <div className="bullets">
-                  <span className="active" data-value="1"></span>
-                  <span data-value="2"></span>
-                  <span data-value="3"></span>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </main>

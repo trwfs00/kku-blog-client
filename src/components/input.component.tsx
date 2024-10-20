@@ -32,6 +32,7 @@ const InputBox: React.FC<InputBoxProps> = ({
   icon,
   disabled = false,
 }) => {
+  
   const IconComponent = icon ? iconMap[icon] : null;
   const [passwordVisible, setPasswordVisible] = useState(false);
 

@@ -34,16 +34,11 @@ const UserNavigationPanel = () => {
           Dashboard
         </Link>
 
-        <Link to={`/settings/edit-profile`} className="link pl-8">
+        <Link to={`/account/preference/${userId}`} className="link pl-8">
           ตั้งค่า
         </Link>
-        <Link to={`/account/preference/${userId}`} className="link pl-8">
-          Account Preference
-        </Link>
+
         <Link to={`/helpcentre`} className="link pl-8">
-          ช่วยเหลือ
-        </Link>
-        <Link to={`/admin/login`} className="link pl-8">
           ช่วยเหลือ
         </Link>
 

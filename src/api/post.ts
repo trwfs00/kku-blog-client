@@ -3,7 +3,7 @@ import { Post } from "../types/post";
 import Cookies from "js-cookie";
 
 const API_BASE_URL =
-  process.env.REACT_APP_API_ENDPOINT ||
+process.env.REACT_APP_API_ENDPOINT ||
   "https://kku-blog-server-ak2l.onrender.com";
 
 const createPost = async (post: any): Promise<any> => {

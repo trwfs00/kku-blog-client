@@ -20,7 +20,7 @@ interface BlogState {
 
 const HomePage = () => {
   const API_URL =
-    process.env.REACT_APP_API_ENDPOINT ||
+  process.env.REACT_APP_API_ENDPOINT ||
     "https://kku-blog-server-ak2l.onrender.com";
   const [blogs, setBlogs] = useState<BlogState | null>(null);
   const [trendingBlogs, setTrendingBlogs] = useState<Post[] | null>(null);
