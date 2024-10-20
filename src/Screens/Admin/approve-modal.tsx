@@ -66,7 +66,7 @@ const ReportDetailsModal: React.FC<ReportDetailsModalProps> = ({
 }) => {
   const navigate = useNavigate();
   const API_BASE_URL =
-    process.env.PUBLIC_APP_ENDPOINT ||
+    process.env.REACT_APP_API_ENDPOINT ||
     "https://kku-blog-server-ak2l.onrender.com";
 
   const verifyReport = async (

@@ -83,7 +83,7 @@ interface Report {
 const AdminHome: React.FC = () => {
   const { adminId } = useParams<{ adminId: string }>();
   const API_BASE_URL =
-    process.env.PUBLIC_APP_ENDPOINT ||
+    process.env.REACT_APP_API_ENDPOINT ||
     "https://kku-blog-server-ak2l.onrender.com";
 
   const [adminProfile, setAdminProfile] = useState<any>(true);
