@@ -1,12 +1,12 @@
 import { useCallback, useMemo, useState } from "react";
 import { fetchFollow, fetchProfile } from "../api/follow";
 import { Button, Modal } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export function FollowingModal({ userProfile }: any) {
   const [smShow, setSmShow] = useState(false);
   const [myUser, setMyUser] = useState<any>(null);
   const [isFollowingModal, setIsFollowingModal] = useState<boolean>(false);
-  const [profileDataArray, setProfileDataArray] = useState<any[]>([]);
   const [currentUser, setCurrentUser] = useState<any>([]);
 
   const handleButtonClick = async () => {
